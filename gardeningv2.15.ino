@@ -46,7 +46,7 @@ void setup() {
   SD_set();
   //Serial.println("Test");
 
-  old = DS1307.getTypeTime(DS1307.eMIN);
+  old = DS1307.getTypeTime(DS1307.eHR);
   notold = old+timing;
 }
 
@@ -60,7 +60,7 @@ void loop() {
     light(vals[0]);
     SDwrite(vals[0],vals[1],vals[2],vals[3],vals[4]);
 
-    old = DS1307.getTypeTime(DS1307.eMIN);
+    old = DS1307.getTypeTime(DS1307.eHR);
     notold = (old +1);
  //stuff
   if (value >= 400 ){
@@ -94,7 +94,7 @@ void loop() {
 
 
   Serial.println(" ");
-  old = DS1307.getTypeTime(DS1307.eMIN);
+  old = DS1307.getTypeTime(DS1307.eHR);
  // Serial.println(old);
  // Serial.println(notold);
 
