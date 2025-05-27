@@ -63,7 +63,7 @@ void loop() {
     old = DS1307.getTypeTime(DS1307.eHR);
     notold = (old +1);
  //stuff
-  if (value >= 400 ){
+  if (value <= 400 ){
     moist_sen(vals[1]);
     pump();
     delay(pumping);
